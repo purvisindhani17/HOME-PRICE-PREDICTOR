@@ -48,6 +48,7 @@ function onPageLoad() {
     // var url = "/api/get_location_names"; // Use this if  you are using nginx. i.e tutorial 8 and onwards  
   $.get(url,function(data, status) {
       console.log("got response for get_location_names request");
+      console.log(data)
       if(data) {
           var locations = data.locations;
           var uiLocations = document.getElementById("uiLocations");
