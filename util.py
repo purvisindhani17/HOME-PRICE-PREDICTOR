@@ -4,11 +4,11 @@ import numpy as np
 
 __locations=None
 __data_columns=None
-__model =None
+__model=None
 
 def get_estimated_price(location,sqft,bhk,bath):
     try:
-        loc_index = __data_columns.index(location.strip.lower())
+        loc_index = __data_columns.index(location.lower())
     except:
         loc_index = -1
     x = np.zeros(len(__data_columns))
@@ -34,5 +34,5 @@ def load_saved_artifacts():
     print("Loaded saved artifacts ..done")
 if __name__ == '__main__':
     load_saved_artifacts()
-    print(get_estimated_price('1st Phase JP Nagar',1000,3,3))
+    # print(get_estimated_price('1st Phase JP Nagar',1000,1,3))
     print(get_location_names())
